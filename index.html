@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VSP</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@400;500;700&display=swap"
-        rel="stylesheet">
+    <title>Виртуальный офис</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -29,16 +28,8 @@
                         <a href="#">
                             Новости и наука
                         </a>
-                        <span class="icon">
-                            <div class="arrow">
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.25 4.875L5 8.625L8.75 4.875" stroke="#272727" stroke-linejoin="round" />
-                                </svg>
-                            </div>
-
-                        </span>
-                        <div class="sub__menu close">
+                        <div class="menu__arrow arrow"></div>
+                        <div class="sub__menu">
                             <div class="sub__menu-wrapper">
                                 <a href="#">Обновления</a>
                                 <a href="#">Исследования</a>
@@ -49,15 +40,8 @@
                         <a href="#">
                             Инструменты
                         </a>
-                        <span class="icon">
-                            <div class="arrow">
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.25 4.875L5 8.625L8.75 4.875" stroke="#272727" stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                        </span>
-                        <div class="sub__menu close">
+                        <div class="menu__arrow arrow"></div>
+                        <div class="sub__menu">
                             <div class="sub__menu-wrapper">
                                 <a href="#">Potions</a>
                                 <a href="#">G-Model</a>
@@ -68,15 +52,8 @@
                         <a href="#">
                             Проекты
                         </a>
-                        <span class="icon">
-                            <div class="arrow">
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.25 4.875L5 8.625L8.75 4.875" stroke="#272727" stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                        </span>
-                        <div class="sub__menu close">
+                        <div class="menu__arrow arrow"></div>
+                        <div class="sub__menu">
                             <div class="sub__menu-wrapper">
                                 <a href="#">Wellness «Лучше!»</a>
                                 <a href="#">Образовательные модули</a>
@@ -90,15 +67,8 @@
                         <a href="#">
                             Кейсы
                         </a>
-                        <span class="icon">
-                            <div class="arrow">
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.25 4.875L5 8.625L8.75 4.875" stroke="#272727" stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                        </span>
-                        <div class="sub__menu close">
+                        <div class="menu__arrow arrow"></div>
+                        <div class="sub__menu">
                             <div class="sub__menu-wrapper">
                                 <a href="#">ИСУ РБ и Исенок</a>
                                 <a href="#">Сила Сбера</a>
@@ -135,12 +105,19 @@
                         Виртуальный офис
                     </h1>
                     <p class="banner__content-text">
-                        Онлайн-помощник для клиентов банка, которые хотят получить персональную видеоконсультацию, не
-                        выходя из дома
+                        Онлайн-помощник для клиентов банка, которые хотят получить персональную видеоконсультацию, не выходя из дома
                     </p>
                 </div>
                 <div class="banner__img">
-                    <img src="img/banner-img.png" alt="img banner">
+                    <img src="img/banner-bg.png" alt="banner video">
+                    <div class="video">
+                        <video controls poster="img/poster-video.png" preload="metadata" class="video__item">
+                            <source src="img/vsp-call.webm" type="video/webm">
+                            <source src="img/vsp-call.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <!-- <img src="img/banner-img.png" alt="img banner"> -->
                 </div>
             </div>
         </div>
@@ -165,11 +142,8 @@
                     <div class="works-easy__content-text">
                         <div class="polygon-bg"></div>
                         <div class="ellipse-bg"></div>
-                        <p>Клиент с любого мобильного устройства или банкомата выбирает нужную ему услугу и записывается
-                            на
-                            виртуальный приём с менеджером банка.</p>
-                        <p>На встрече клиент получает консультацию, онлайн-демонстрацию условий и возможность оформить
-                            необходимый банковский продукт.</p>
+                        <p>Клиент с любого мобильного устройства или банкомата выбирает нужную ему услугу и записывается на виртуальный приём с менеджером банка.</p>
+                        <p>На встрече клиент получает консультацию, онлайн-демонстрацию условий и возможность оформить необходимый банковский продукт.</p>
                     </div>
                 </div>
             </div>
@@ -184,8 +158,7 @@
                         Настроение
                     </h2>
                     <p class="mood__content-text">
-                        Клиент может отправлять смайлики сотруднику во время разговора, чтобы менеджеры в режиме
-                        реального времени понимали настроение человека.
+                        Клиент может отправлять смайлики сотруднику во время разговора, чтобы менеджеры в режиме реального времени понимали настроение человека.
                     </p>
                 </div>
                 <div class="mood__content-img">
@@ -315,8 +288,7 @@
                             <img src="img/footer-logo.svg" alt="" width="108px" height="29,68px">
                         </div>
                         <div class="footer__text">
-                            <p><span>Лаборатория геймификации Сбера —</span><br> встраивание игровых механик во
-                                внутренние и внешние процессы Банка</p>
+                            <p><span>Лаборатория геймификации Сбера —</span><br> встраивание игровых механик во внутренние и внешние процессы Банка</p>
                         </div>
                     </div>
                     <div class="footer__icons">
