@@ -5,28 +5,32 @@ $(function() {
         $('body').toggleClass('lock');
 
     });
-
-    $('.header__menu-item').mouseenter(function() {
-        if ($('.arrow').not('.rotate')) {
-            $(this).children('.icon').children('.arrow').addClass('rotate');
-        };
-        if ($('.sub__menu').hasClass('close')) {
-            $(this).children('.sub__menu').removeClass('close');
-        };
-    });
-
-    $('.header__menu-item').mouseleave(function() {
-        if ($('.arrow').hasClass('rotate')) {
-            $(this).children('.icon').children('.arrow').removeClass('rotate');
-        };
-        if ($('.sub__menu').not('.close')) {
-            $(this).children('.sub__menu').addClass('close');
-        };
-    });
-
-    $('.icon').click(function() {
-        $(this).children('.arrow').toggleClass('rotate');
-        $(this).closest('.header__menu-item').children('.sub__menu').toggleClass('close');
-    });
-
 });
+
+let isMobile = {
+	Android: function() {return navigator.userAgent.match(/Android/i);},
+	BlackBerry: function() {return navigator.userAgent.match(/BlackBerry/i);},
+	iOS: function() {return navigator.userAgent.match(/iPhone|iPad|iPod/i);},
+	Opera: function() {return navigator.userAgent.match(/Opera Mini/i);},
+	Windows: function() {return navigator.userAgent.match(/IEMobile/i);},
+	any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
+};
+
+let body=document.querySelector('body');
+if(isMobile.any()){
+    body.classList.add('touch');
+    let arrow=document.querySelectorAll('.arrow');
+	for(i=0; i<arrow.length; i++){
+			let thisLink=arrow[i].previousElementSibling;
+			let subMenu=arrow[i].nextElementSibling;
+			let thisArrow=arrow[i];
+
+			thisLink.classList.add('parent');
+		arrow[i].addEventListener('click', function(){
+			subMenu.classList.toggle('open');
+			thisArrow.classList.toggle('active');
+		});
+	}
+}else{
+	body.classList.add('mouse');
+}
